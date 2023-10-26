@@ -1,15 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../usuario';
-import { Constants } from 'src/app/constants/constants';
+import { UsersService } from 'src/app/users.service';
 
 @Component({
   selector: 'app-listarusuarios',
   templateUrl: './listarusuarios.component.html',
   styleUrls: ['./listarusuarios.component.css']
 })
-export class ListarusuariosComponent {
+export class ListarusuariosComponent implements OnInit{
 
-  usuarios:Usuario[]=Constants.usuarios
+  
+
+  usuarios:Usuario[]=[]
+
+  constructor(private userDataService: UsersService) {
+  }
+
+  ngOnInit(): void {
+      this.usuarios=this.userDataService.getUsers()
+  }
+
 
   editUser(user: Usuario) {
     // Implement edit logic here

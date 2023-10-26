@@ -4,20 +4,22 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    path:'',component:DashboardComponent
-  },
-  {
-    path: 'dashboard', component: DashboardComponent,
+    path:'',component:DashboardComponent,
     children: [
       /**IMPORTANTE: cuando la aplicacion cargue la ruta
        * http://localhost:4200/dashboard lo vamos a redireccionar a su hijo: movies
        * */
       {
-        path: '', redirectTo: '/dashboard/movies', pathMatch: 'full'
+        path: '', loadChildren: () => import('./users/users.module').then(m=>m.UsersModule)
+      },
+      {
+        path: 'agregar', loadChildren: () => import('./users/users.module').then(m=>m.UsersModule)
       },
       
+      
+      
     ]
-  }
+  },
 ];
 
 @NgModule({

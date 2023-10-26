@@ -14,6 +14,8 @@ import { SearchModule } from './search/search.module';
 import { EditarusuariosComponent } from './users/editarusuarios/editarusuarios.component';
 import { ListarusuariosComponent } from './users/listarusuarios/listarusuarios.component';
 import { UsersModule } from './users/users.module';
+import { AgregarusuariosComponent } from './users/agregarusuarios/agregarusuarios.component';
+import { UsersService } from './users.service';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { UsersModule } from './users/users.module';
     HeaderModule,
     SidenavModule,
     SearchModule,
-    UsersModule
+    UsersModule,
     
   ],
   providers: [
     
   ],
+  
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
