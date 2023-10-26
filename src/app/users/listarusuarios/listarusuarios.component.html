@@ -1,0 +1,27 @@
+<table class="user-table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Email</th>
+        <th>Tipo de Usuario</th>
+        <th>Fecha de Creación</th>
+        <th>Observaciones</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usuarios">
+        <td>{{ user.nombre }}</td>
+        <td>{{ user.apellidos }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.tipoUsuario }}</td>
+        <td>{{ user.fechaCreacion }}</td>
+        <td>{{ user.observaciones }}</td>
+        <td>
+          <button class="edit-button" (click)="editUser(user)">Edit</button>
+          <button class="delete-button" (click)="deleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

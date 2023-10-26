@@ -1,0 +1,41 @@
+/* Apply styles to the table */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  /* Style the table header */
+  .user-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* Style the table rows */
+  .user-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Style the table data cells */
+  .user-table td {
+    padding: 8px;
+  }
+  
+  /* Style the "Edit" and "Delete" buttons */
+  .edit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
